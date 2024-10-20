@@ -31,7 +31,8 @@ public class AdminPage {
 		System.out.println("Admin option not found.....");
 	}
 
-	public void selectUserName(String selectUser) {
+	public void selectUserName(String selectUser) throws InterruptedException {
+		Thread.sleep(2000);
 		// Select User name "Admin"
 		WebElement usernameInput = driver.findElement(By.xpath(
 				"//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input"));
@@ -39,7 +40,9 @@ public class AdminPage {
 		usernameInput.sendKeys(selectUser);
 	}
 
-	public void selectUserRole(String selectRole) {
+	public void selectUserRole(String selectRole) throws InterruptedException {
+		
+		Thread.sleep(2000);
 		// Select User role "Admin"
 		driver.findElement(By.xpath(
 				"//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[2]/i"))
@@ -59,7 +62,8 @@ public class AdminPage {
 
 	}
 
-	public void selectUserStatus(String selectEnabled) {
+	public void selectUserStatus(String selectEnabled) throws InterruptedException {
+		Thread.sleep(2000);
 		// Select status "Enabled"
 		driver.findElement(By.xpath(
 				"//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[2]/i"))

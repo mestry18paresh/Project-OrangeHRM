@@ -44,14 +44,14 @@ public class AdminPageTest {
 	}
 
 	@Test(priority = 4, dependsOnMethods = "selectAdminMenuTest")
-	public void selectUserRoleTest() throws InterruptedException {
+	public void selectUserRoleTest() throws InterruptedException{
 		adminPage.selectUserRole("Admin");
 		System.out.println("User Role = ");
 		adminPage.displayResult();
 	}
 
 	@Test(priority = 5, dependsOnMethods = "selectAdminMenuTest")
-	public void selectUserStatusTest() throws InterruptedException {
+	public void selectUserStatusTest() throws InterruptedException{
 		adminPage.selectUserStatus("Enabled");
 		System.out.println("User Status = ");
 		adminPage.displayResult();
